@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    margin-top: 300px;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+/* Overlay */
+
+.result-screen-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 6px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result {
+    position: absolute;
+    top: 60px;
+    font-size: 35px;
+    margin-top: 40px;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(78, 78, 78);
+    height: 150px;
+    box-shadow: 6px 6px 6px 8px rgb(224, 224, 224);
+}
+
+.project-title {
+    font-size: 100px;
+    color: lightgreen;
+    margin-left: 100px;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.header-buttons {
+    margin-right: 100px;
+}
+
+/* Restart Buttons */
+
+.restart, .overlay-restart {
+    font-family: 'Fuzzy Bubbles', cursive;
+    border: none;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    transition: padding 0.15s, background-color 0.15s;
+    cursor: pointer;
+}
+
+.overlay-restart {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.restart:hover {
+    padding: 15px 25px 15px 25px;
+    background-color: rgb(243, 243, 243);
+}
+
+.overlay-restart:hover {
+    background-color: rgb(247, 247, 247)
+}
